@@ -1,0 +1,70 @@
+<h1>Payment Checkout </h1>
+<p class="required">*All fields are required</p>
+<div id="formDiv">
+  <%= form_for @order do |f| %>
+    <b style="font-size: 20px;">Total Price:</b> <%= current_cart.total_price %>
+
+    <% if @order.express_token.blank? %>
+      <%= validation_error(@order.errors["base"]) %>
+      <p>
+        <%= f.label :first_name %>
+        <%= f.text_field :first_name %>
+      </p>
+      <p>
+        <%= f.label :last_name %>
+        <%= f.text_field :last_name %>
+      </p>
+      <p>
+        <%= f.label :card_type %>
+        <%= f.select :card_type, [["Visa", "visa"], ["MasterCard", "master"], ["Discover", "discover"], ["American Express", "american_express"]] %>
+      </p>
+      <p>
+        <%= f.label :card_number %>
+        <%= f.text_field :card_number %>
+      </p>
+      <p>
+        <%= f.label :card_verification, "Card Verification Value (CVV)" %>
+        <%= f.text_field :card_verification %>
+      </p>
+      <p>
+        <%= f.label :card_expires_on %>
+        <%= f.date_select :card_expires_on, :discard_day => true, :start_year => Date.today.year, :end_year => (Date.today.year+10), :add_month_numbers => true %>
+      </p>
+      <p>
+        <b style="font-size: 20px;"><%= f.label :billing_address, "Billing Address:" %></b>
+      </p>
+      <p>
+        <%= label :address, "Address1*:" %>
+        <%= text_field_tag 'order[address]', (params[:order] ? params[:order][:address] : '') %>
+        <%= validation_error(@order.errors["address"]) %>
+      </p>
+      <p>
+        <%= label :city, "City*:" %>
+        <%= text_field_tag 'order[city]', (params[:order] ? params[:order][:city] : '') %>
+        <%= validation_error(@order.errors["city"]) %>
+      </p>
+      <p>
+        <%= label :state, "State*:" %>
+        <%= text_field_tag 'order[state]', (params[:order] ? params[:order][:state] : '') %>
+        <%= validation_error(@order.errors["state"]) %>
+      </p>
+      <p>
+        <%= label :zip, "Zip Code*:" %>
+        <%= text_field_tag 'order[zip]', (params[:order] ? params[:order][:zip] : '') %>
+        <%= validation_error(@order.errors["zip"]) %>
+      </p>
+      <p>
+        <%= label :country, "Country*:" %>
+        <%= select_tag 'order[country]', options_for_select(COUNTRIES_WITH_CODES, ((params[:order] and params[:order][:country]) ? params[:order][:country] : 'us')), :style => "width: 200px;" %>
+      </p>
+    <% else %>
+      <%= f.hidden_field :express_token %>
+      <p>Name: <%=h @order.first_name %> <%=h @order.last_name %></p>
+      <p>Please click below to finish payment.  </p>
+    <% end %>
+    <p style="padding-left: 200px;">
+      <button class="submit_button">Purchase</button>
+  <%#= f.submit "Complete Payment" %>
+    </p>
+  <% end %>
+</div>

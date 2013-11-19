@@ -1,0 +1,83 @@
+<h1><%= @deal.title %></h1>
+<div class="content homepage" style="padding-top:20px;">
+  <div class="dealThumbs">
+    <% if !@deal.images.empty? %>
+      <% for image in @deal.images %>
+        <div class="dealImg">
+          <%= link_to_function image_tag(image.image_url(:thumb), :width => "70", :height => "70"), "show_deal_large_img('#{image.image_url(:large)}')" %>
+        </div>
+      <% end %>
+    <% else %>
+      <div class="dealImg">
+        <%= image_tag("no_image.gif", :width => "70", :height => "70") %>
+      </div>
+    <% end %>
+  </div>
+  <div class="dealLargeImg">
+    <%= image_tag(@deal.images.first ? @deal.images.first.image_url(:large) : "no_image.gif", :id => "large_deal_image") %>
+  </div>
+  <div style="float: left;padding-right: 5px;">
+    <%= @deal.description %>
+    <br />
+    <b>Available:</b> <%= @deal.active_coupons.count %>
+    <br />
+    <b>Purchase Price:</b> $<%= @deal.purchase_price %>
+    <br />
+    <b>Purchase Credits:</b> <%= @deal.purchase_credits %>
+    <br />
+    <b>Status:</b> <%= @deal.status%>
+    <br />
+    <b>Deal Date:</b> <%= @deal.deal_date.strftime("%b, %d %Y") %>
+    <br />
+    <b>Expire Date:</b> <%= @deal.expire_date.strftime('%b, %d %Y %I:%M %p') %>
+    <br />
+    <b>Expire Date:</b> <%= @deal.expire_date.strftime('%b, %d %Y %I:%M %p') %>
+    <br />
+    <b>Store:</b><br />
+    <% if @deal.store %>
+      <%= link_to image_tag(@deal.store.image_url(:thumb)), @deal.store_url, :target => "_blank" %>
+      <%= link_to @deal.store.name, @deal.store_url, :target => "_blank" %>
+    <% else %>
+      <%= link_to "View store", @deal.store_url, :target => "_blank" %>
+    <% end %>
+    <br />
+    <%= @deal.store_message %>
+    <br /><br />
+    <div>
+      <%= link_to_function "Add to cart", "alert('coming soon...')", :class => "button" %>
+      <%= link_to_function "Share with friend", "alert('coming soon...')", :class => "button" %>
+    </div>
+
+  </div>
+
+  <div style="clear: both"></div>
+  <div style="float:right">
+<%#= render :partial => "layouts/share_social_networks" %>
+  </div>
+</div>
+<h1>Other deals</h1>
+<div class="content homepage" style="padding-top:20px;">
+  <% for deal in @deals do %>
+<<<<<<< .mine
+          <%= image_tag(deal.images.image_url(:thumb),:width => "70", :height => "70") %>
+=======
+      <div>
+        <div style="float:left;width:45%;">
+          <% images = deal.images.all(:limit => 3) %>
+          <% for image in images %>
+            <div class="dealImg" style="margin-right: 20px;">
+              <%= image_tag(image.image_url(:thumb),:width => "70", :height => "70") %>
+            </div>
+          <% end %>
+        </div>
+        <div style="float:left;width:55%;height:auto">
+          <h1><%= link_to deal.title, deal_path(deal) %></h1>
+          <%= deal.description %>
+        </div>
+      </div>
+>>>>>>> .r36
+      <div style="clear:both"></div>
+    <% end %>
+
+  </div>
+

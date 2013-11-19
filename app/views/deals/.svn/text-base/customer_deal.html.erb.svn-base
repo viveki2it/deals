@@ -1,0 +1,19 @@
+<div id="formDiv">
+
+  <table border="1" width="50%">
+    <tr>
+      <td>Title:</td>
+      <td>Purchase Price:</td>
+    </tr>
+    <% current_user.user_deals.each do |user_deal| %>
+      <tr>
+        <td><%= user_deal.deal.title %></td>
+        <td><%= user_deal.deal.purchase_price %></td>
+      </tr>
+    <%end%>
+  </table><br />
+  <b style="padding-left: 9em; border: 1">Total Credits:</b> <%= @cart.total_price %>
+  <p style="padding-left: 49.5em;">
+    <%= link_to image_tag("https://www.paypal.com/en_US/i/btn/btn_xpressCheckout.gif"), express_new_order_path %>
+  </p>
+</div>

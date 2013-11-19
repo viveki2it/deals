@@ -1,0 +1,17 @@
+
+<div style="clear: both;"></div>
+<%= form_for [:admin, @deal, @coupon], :remote => true, :html => { :style => "margin:0px;" } do |f| %>
+  <div>
+    <div style="float: left">
+      <%= f.text_field :number%>
+      <%= validation_error(@coupon.errors["number"]) %> &nbsp;
+    </div>
+    <div style="float: left">
+      <%=  f.submit 'update', :style => "width: 70px;" %>
+      <%= link_to_function "Cancel", "$('#coupon_number_edit_form_#{@coupon.id}').hide();$('#coupon_number_edit_#{@coupon.id}').show();" %>
+    </div>
+    <div style="clear: both;"></div>
+  </div>
+
+<% end %>
+<div style="clear: both;"></div>

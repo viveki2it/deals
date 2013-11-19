@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Find Awesome Deals</title>
+    <%= stylesheet_link_tag 'style', 'application', "/javascripts/timepicker/jquery-ui-timepicker-addon", "/javascripts/jquery-ui-1.8.16.custom/css/custom-theme/jquery-ui-1.8.16.custom.css" %>
+    <%= javascript_include_tag "http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js", "http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.13/jquery-ui.min.js", 'rails', 'application', "/javascripts/jquery-ui-1.8.16.custom/js/jquery-ui-1.8.16.custom.min.js", "timepicker/jquery-ui-timepicker-addon" %>
+    <%= csrf_meta_tag %>
+    <style type="text/css">
+      /* css for timepicker */
+      .ui-timepicker-div .ui-widget-header{ margin-bottom: 8px; }
+      .ui-timepicker-div dl{ text-align: left; }
+      .ui-timepicker-div dl dt{ height: 25px; }
+      .ui-timepicker-div dl dd{ margin: -25px 0 10px 65px; }
+      .ui-timepicker-div td { font-size: 90%; }
+
+    </style>
+  </head>
+  <body>
+
+    <div id="header">
+      <%= link_to image_tag("logo.jpg", :class => "logo"), "/" %>
+      <div id="header_search">
+        <%= render :partial => 'deals/search' , :class => "search_query" %>
+      </div>
+
+      <% if user_signed_in? %>
+        <div id="header_logout">
+          <div>
+            Welcome, <%= current_user.user_tokens.empty? ? link_to(current_user.email, edit_user_registration_path) : current_user.email %>.
+          </div>
+          <div style="float:right;padding-top: 5px;">
+            <% if current_user.is_admin? %>
+<<<<<<< .mine
+            <%= link_to "purchased deals", user_purchased_deals_user_purchaged_deals_path, :class => "button" %>
+            <%= link_to "Your Deals", user_purchaged_deals_path, :class => "button" %>
+=======
+            <%= link_to "Your Deals", user_purchased_deals_path, :class => "button" %>
+>>>>>>> .r73
+              <%= link_to "Your Cart", user_deals_path, :class => "button" %>
+              <%= link_to "Admin", admin_deals_path, :class => "button" %>
+            <% end %>
+            <%= link_to "Sign out", destroy_user_session_path, :class => "button" %>
+          </div>
+
+        </div>
+      <% else %>
+        <div id="header_login">
+          <%= link_to "Sign In", new_user_session_path, :class => "button" %>
+          <%= link_to "Sign Up", new_user_registration_path, :class => "button" %>
+          <%= link_to image_tag("facebook-connect.gif", :align => "absmiddle"), "/users/auth/facebook" %>
+        </div>
+      <% end %>
+
+    </div>
+    <div id="maincontent">
+      <% if params[:controller].include?("admin/") and current_user.is_admin? %>
+        <div style="float:right;padding-top: 5px;">
+          <%= link_to "Stores", admin_stores_path, :class => "button" %>
+          <%= link_to "Deal types", admin_deal_types_path, :class => "button" %>
+          <%= link_to "Deals", admin_deals_path, :class => "button" %>
+          <%= link_to "Purchased deals", admin_user_purchased_deals_path, :class => "button" %>
+        </div>
+        <div style="clear:both"></div>
+      <% end %>
+      <% flash.each do |key, value| %>
+        <div class="flash <%= key %>"><%= value %></div>
+      <% end %>
+
+      <%= yield %>
+    </div>
+    <div id='overlay' style='filter:alpha(opacity=50);'></div>
+    <div align='center' id='popup_box'>
+      <div style='float: right; margin-top: -40px;margin-right:-40px'>
+        <%= image_tag('popup_close.png', :onclick => "hide_popup();", :style => "cursor: pointer;")%>
+      </div>
+      <div id='popup_body' style='float:right'></div>
+    </div>
+
+    <div id="footer">
+      <span>© 2011 Deals, Inc</span><a href="#">About</a> | <a href="#">Sellers / Artisans<sup>&nbsp;New</sup></a>
+    </div>
+
+    <div id='overlay' onclick='hide_popup()' style='filter:alpha(opacity=50);'></div>
+
+    <div align='center' id='popup_box'>
+      <div style='float: right; margin-top: -40px;margin-right:-40px'>
+      </div>
+      <div id='popup_body' style='float:right'></div>
+    </div>
+
+  </body>
+</html>

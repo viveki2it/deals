@@ -1,0 +1,11 @@
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/deals/!svn/ver/108/trunk/app/views/user_deals
+END
+index.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/deals/!svn/ver/108/trunk/app/views/user_deals/index.html.erb
+END

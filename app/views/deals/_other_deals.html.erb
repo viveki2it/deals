@@ -1,0 +1,22 @@
+<div id="leftContent">
+  <div class="bar">Other deals</div>
+  <div class="prodImgs">
+    <% for deal in @active_deals %>
+  <%# if deal.status == DEAL_ACTIVE %>
+      <% images = deal.images.all(:limit => 3) %>
+      <% if !images.empty? %>
+        <% for image in images %>
+          <div class="prodImg"><%= link_to image_tag(image.image_url(:thumb),:width => "130", :height => "110"), deal_path(deal) %></div>
+        <% end %>
+      <% else %>
+          <div class="prodImg"><%= link_to deal_image(deal), deal_path(deal) %></div>
+      <% end %>
+      <div class="otherDeal">
+        <h2> <%= link_to deal.title, deal_path(deal) %></h2>
+        <h3><%= deal.description %></h3>
+      </div>
+      <div style="clear:both"></div>
+    <% end %>
+<%# end %>
+  </div>
+</div>

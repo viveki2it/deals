@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/deals/!svn/ver/121/trunk/app/controllers
+END
+orders_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/deals/!svn/ver/71/trunk/app/controllers/orders_controller.rb
+END
+application_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/deals/!svn/ver/121/trunk/app/controllers/application_controller.rb
+END
+user_purchased_deals_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/deals/!svn/ver/69/trunk/app/controllers/user_purchased_deals_controller.rb
+END
+user_deals_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/deals/!svn/ver/116/trunk/app/controllers/user_deals_controller.rb
+END
+home_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/deals/!svn/ver/99/trunk/app/controllers/home_controller.rb
+END
+deals_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/deals/!svn/ver/111/trunk/app/controllers/deals_controller.rb
+END
+user_purchaged_deals_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/deals/!svn/ver/50/trunk/app/controllers/user_purchaged_deals_controller.rb
+END

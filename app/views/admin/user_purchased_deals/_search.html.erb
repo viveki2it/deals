@@ -1,0 +1,3 @@
+<%= form_tag search_admin_user_purchased_deals_path, :method => 'get' do %>
+  <%= text_field_tag(:query, "#{params[:query] || 'Search for Deal'}",:onFocus => "if(this.value=='Search for Deal') this.value='';",:onBlur => "if(this.value=='') this.value='Search for Deal';") %>
+<% end %>

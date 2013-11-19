@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/deals/!svn/ver/120/trunk/app/views/admin/deals
+END
+edit.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/deals/!svn/ver/9/trunk/app/views/admin/deals/edit.html.erb
+END
+index.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/deals/!svn/ver/26/trunk/app/views/admin/deals/index.html.erb
+END
+_image_fields.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/deals/!svn/ver/18/trunk/app/views/admin/deals/_image_fields.html.erb
+END
+_coupon_fields.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/deals/!svn/ver/37/trunk/app/views/admin/deals/_coupon_fields.html.erb
+END
+new.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/deals/!svn/ver/9/trunk/app/views/admin/deals/new.html.erb
+END
+show.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/deals/!svn/ver/91/trunk/app/views/admin/deals/show.html.erb
+END
+_form.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/deals/!svn/ver/120/trunk/app/views/admin/deals/_form.html.erb
+END

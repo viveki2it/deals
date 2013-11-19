@@ -1,0 +1,8 @@
+<div class="fields" style="width: 100%">
+  <span style="float:left">
+    <%= f.text_field :number %>
+  </span>
+  <span style="float:left"><%= link_to_remove_fields "remove", f %>
+  </span>
+</div>
+<div style="clear: both"></div>

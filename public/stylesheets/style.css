@@ -1,0 +1,268 @@
+body{ margin:0px; padding:0px; font-family:Arial, Helvetica, sans-serif;}
+a{ text-decoration:none;}
+
+#header {
+    border-bottom:6px solid #BEB3B4;
+    height:80px;
+    margin:0 auto;
+    width:954px;
+}
+
+#overlay{
+    display: none;
+    background-color: #000000;
+    height:500px;
+    left:0;
+    position:fixed;
+    top:0;
+    width:100%;
+    z-index: 1000;
+    width: 100000px;
+    height: 941px;
+    opacity: 0.5;
+}
+
+#popup_box {
+    height:auto;
+    width:auto;
+    left:50%;
+    margin: -220px 0 0 -250px;
+    padding:15px;
+    position:fixed;
+    background-color:#FFFFFF;
+    top:50%;
+    z-index:1001;
+    font-size: 12px;
+    display: none
+}
+
+.logo  {
+    float:left;
+    margin-top:10px;
+}
+img {
+    border:medium none;
+}
+
+#header_search {
+    float:left;
+    margin-left:20px;
+    margin-top:35px;
+}
+
+.search_query {
+    border:1px solid #C8C7C7;
+    height:20px;
+    margin-right:10px;
+    width:300px;
+}
+#header_login {
+    float:right;
+    margin-top:35px;
+    position:relative;
+}
+#header_logout {
+    float:right;
+    margin-top:5px;
+    position:relative;
+}
+.button  {
+    background:url("/images/button.jpg") no-repeat scroll 0 0 transparent;
+    border:medium none;
+    color:#333333;
+    display:inline-block;
+    font-size:11px;
+    height:19px;
+    margin:0 3px;
+    padding:3px 0;
+    text-align:center;
+    vertical-align:middle;
+    width:89px;
+}
+#maincontent {
+    margin:0 auto;
+    width:954px;
+}
+#footer {
+    border-top:2px solid #BEB3B4;
+    clear:both;
+    margin:0 auto 44px;
+    overflow:hidden;
+    padding-top:15px;
+    width:954px;
+}
+#footer span {
+    font-size:12px;
+    margin-right:20px;
+}
+#footer a {
+    color:#333333;
+    font-size:12px;
+}
+.flash error {
+
+    font-size:15px;
+    font-style:italic;
+    margin:20px 0 0;
+}
+.error {
+    color:#FF0000;
+}
+.notice {
+    color:green;
+}
+#maincontent h1 {
+    color:#FC0000;
+    font-size:18px;
+    font-weight:normal;
+    margin:26px 0 0;
+    padding:0;
+    text-transform:capitalize;
+}
+#formDiv {
+    border:2px solid #BEB3B4;
+    float:left;
+    margin-bottom:23px;
+    margin-top:10px;
+    width:950px;
+}
+#formDiv form {
+    background-color:#E3E3E3;
+    float:left;
+    margin:45px;
+    padding:0;
+}
+#formDiv form p {
+    border-bottom:1px solid #FFFFFF;
+    margin:0;
+    padding:10px;
+    clear:both;
+}
+#formDiv form label {
+    display:inline-block;
+    font-size:14px;
+    width:145px;
+}
+#formDiv form input {
+    width:289px;
+}
+form input {
+    border:1px solid #C8C7C7;
+    height:20px;
+    margin-right:10px;
+    width:300px;
+}
+form textarea {
+    border:1px solid #C8C7C7;
+}
+#formDiv .info {
+    float:left;
+    margin-top:45px;
+    width:290px;
+}
+
+.info h2 {
+    font-size:16px;
+    font-weight:bold;
+}
+.info p {
+    font-size:14px;
+}
+.info a {
+    color:#FC0000;
+    text-decoration:underline;
+}
+#formDiv form button, .submit_button {
+    background:url("/images/btn1.png") no-repeat scroll 0 0 transparent;
+    border:medium none;
+    color:#FC0000;
+    font-size:14px;
+    height:32px;
+    margin:0 3px 0 150px;
+    padding:0 0 3px;
+    width:123px;
+}
+.required {
+    font-size:12px;
+    margin-bottom:0;
+}
+/* form errors */
+
+#error_explanation {
+    color:#FF0000;
+    margin:0 10px;
+}
+#error_explanation h2 {
+    font-size:14px;
+    font-weight:normal;
+}
+#error_explanation ul {
+    font-size:12px;
+}
+#error_explanation ul li {
+    font-style:italic;
+}
+.field_with_errors {
+    float: left;
+    clear: both;
+}
+
+.form_error {
+    font-size: 14px;
+    color: red;
+}
+
+.deal {
+    border: solid 1px #CCC;
+    padding: 10px ;
+    float: left;
+    margin-right: 20px;
+}
+
+.deal1 {
+    padding: 10px ;
+    float: left;
+    margin-right: 20px;
+}
+
+.homepage  {
+    float:none;
+    margin:20px auto 30px;
+    overflow:hidden;
+}
+.content {
+    border:2px solid #BEB3B4;
+    float:left;
+    margin-bottom:23px;
+    padding:0 15px 15px;
+    width:905px;
+}
+.prodImgs {
+    float:left;
+    margin-top:18px;
+}
+.content .prodImgWrap {
+    float:left;
+    text-align:center;
+    width:226px;
+}
+.content .prodImg {
+    margin:0 13px 8px;
+}
+.prodImg {
+    border:1px solid #666666;
+    float:left;
+    height:140px;
+    margin-bottom:20px;
+    margin-right:26px;
+    padding:14px;
+    position:relative;
+    text-align:center;
+    width:170px;
+}
+.content .itemNameVis {
+    display:inline-block;
+    font-size:13px;
+    margin-bottom:20px;
+}
+

@@ -1,0 +1,53 @@
+<div class="deals" id="content">
+  <div style="float:right;">
+    <%#= will_paginate @deals %>
+  </div>
+<<<<<<< .mine
+  <% if params[:controller].include?("admin/") %>
+    <div>Deal status:
+      <%=  select_tag :id, options_from_collection_for_select(@deals, 'id', 'status') %>
+    </div>
+  <% end %>
+=======
+  <%= link_to "New Deal", new_admin_deal_path %>
+>>>>>>> .r97
+    <div class="content homepage" style="width: 864px;">
+      <div class="prodImgs">
+        <% if !@deals.empty? %>
+          <% for deal in @deals %>
+    <%# if deal.status == DEAL_FEATURED %>
+            <div class="prodImgWrap">
+              <div class="prodImg">
+                <%= link_to image_tag(deal.images.first.image_url(:thumb),:width => "130", :height => "110"), deal_path(deal) %>             </div>
+              <span class="itemNameVis">
+                <% if params[:controller].include?("admin/") %>
+                  <%= link_to image_tag("closeX.gif"), admin_deal_path(deal), :method => 'DELETE' ,:confirm => 'are you sure?' %>
+                  <%= link_to image_tag("edit.gif"), edit_admin_deal_path(deal) %>
+                <% end %>
+                <%= link_to deal.title, deal_path(deal) %>
+                <strong>(&nbsp;<%=  deal.active_coupons.count %>&nbsp;)</strong> <br />
+                <% if deal.active_coupons.count > 0 and current_user and !params[:controller].include?("admin/") %>
+                  <%= link_to 'Add To Cart', add_to_cart_deal_path(deal),:remote => true,:class => 'button',:method => 'post' %>
+      <%# else %>
+      <%#= link_to_function "Add To Cart",   "alert('Please login/register to purchage this deal')", :class => 'button' %>
+                <% end %>
+              </span>
+            </div>
+    <%# end %>
+          <% end %>
+        <% else %>
+          <div style="text-align: center;padding: 10px;">
+            No deals added
+          </div>
+        <% end %>
+      </div>
+    </div>
+    <div style="float:right;">
+      <%#= will_paginate @deals %>
+      <br />
+    </div>
+    <% if !params[:controller].include?("admin/") %>
+      <%= render :partial => 'deals/other_deals' %>
+    <% end %>
+  </div>
+

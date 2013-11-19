@@ -1,0 +1,49 @@
+10
+
+dir
+123
+http://svn.dine-media.com/svn/deals/trunk/app/views/devise
+http://svn.dine-media.com/svn/deals
+
+
+
+2011-10-23T16:25:35.277264Z
+1
+root
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+2676884a-6fb9-41a3-b030-09e4dd5c4c45
+
+passwords
+dir
+
+sessions
+dir
+
+shared
+dir
+
+mailer
+dir
+
+confirmations
+dir
+
+registrations
+dir
+
+unlocks
+dir
+

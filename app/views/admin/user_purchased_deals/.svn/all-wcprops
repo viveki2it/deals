@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/deals/!svn/ver/99/trunk/app/views/admin/user_purchased_deals
+END
+user_deals.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/deals/!svn/ver/79/trunk/app/views/admin/user_purchased_deals/user_deals.html.erb
+END
+index.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/deals/!svn/ver/99/trunk/app/views/admin/user_purchased_deals/index.html.erb
+END
+show.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/deals/!svn/ver/99/trunk/app/views/admin/user_purchased_deals/show.html.erb
+END
+_search.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/deals/!svn/ver/79/trunk/app/views/admin/user_purchased_deals/_search.html.erb
+END

@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/deals/!svn/ver/84/trunk/app/views/admin/deal_types
+END
+index.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/deals/!svn/ver/26/trunk/app/views/admin/deal_types/index.html.erb
+END
+update.js.erb
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/deals/!svn/ver/15/trunk/app/views/admin/deal_types/update.js.erb
+END
+create.js.erb
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/deals/!svn/ver/15/trunk/app/views/admin/deal_types/create.js.erb
+END
+edit.js.erb
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/deals/!svn/ver/15/trunk/app/views/admin/deal_types/edit.js.erb
+END
+_form.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/deals/!svn/ver/17/trunk/app/views/admin/deal_types/_form.html.erb
+END

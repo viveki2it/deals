@@ -1,0 +1,43 @@
+10
+
+dir
+123
+http://svn.dine-media.com/svn/deals/trunk/app/views/admin
+http://svn.dine-media.com/svn/deals
+
+
+
+2011-11-17T16:12:29.305513Z
+120
+nagarjuna
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+2676884a-6fb9-41a3-b030-09e4dd5c4c45
+
+user_purchased_deals
+dir
+
+images
+dir
+
+coupons
+dir
+
+deals
+dir
+
+deal_types
+dir
+

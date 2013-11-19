@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/deals/!svn/ver/69/trunk/test/unit/helpers
+END
+user_deals_helper_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/deals/!svn/ver/69/trunk/test/unit/helpers/user_deals_helper_test.rb
+END
+home_helper_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/deals/!svn/ver/1/trunk/test/unit/helpers/home_helper_test.rb
+END
+deals_helper_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/deals/!svn/ver/25/trunk/test/unit/helpers/deals_helper_test.rb
+END

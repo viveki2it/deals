@@ -1,0 +1,57 @@
+
+
+class Deal < ActiveRecord::Base
+
+  validates :title ,:presence => true
+  validates :deal_type_id ,:presence => { :message => "Select deal type" }
+  validates :expire_date,:presence => { :message => "should be greater than today" }
+  validates :coupon_expire_date ,:presence => { :message => "should be greater than today" }
+  validates :store_id ,:presence => { :message => "Select store"}
+  validates_numericality_of :purchase_price, :presence => { :message => "must be float"}, :only_float => true
+  validates_numericality_of :purchase_credits, :only_integer => true ,:presence => true
+  validates :status, :presence => true, :inclusion => { :in => DEAL_STATUSES }
+  validates :store_url, :presence => true
+  validates :deal_date,
+    :date => { :after => (Date.today), :message => "should be greater than today" }
+  validates :expire_date,
+    :date => { :after => (Date.today+1), :message => "should be greater than today" }
+  validates :coupon_expire_date,
+    :date => { :after => (Date.today+1), :message => "should be greater than today" }
+
+  # validates :number,:presence => true
+  # validates :number,:uniqueness => true
+
+  validate :validate_unique_coupon_number
+
+
+
+
+
+  belongs_to :store
+  belongs_to :deal_type
+  has_many :coupons,:dependent => :destroy
+  has_many :user_shared_deals,:dependent => :destroy
+  has_many :active_coupons, :conditions => "status != 'Closed'", :class_name => "Coupon"
+  has_many :images,:dependent => :destroy
+  has_many :user_deals,:dependent => :destroy
+  accepts_nested_attributes_for  :images,  :allow_destroy  => true,:reject_if => :all_blank
+  accepts_nested_attributes_for  :coupons,  :allow_destroy  => true,:reject_if => :all_blank
+
+
+
+  # Require all steps to be a unique number
+  def validate_unique_coupon_number
+    coupon_numbers = []
+    coupons.each do |coupon|
+      #puts step.description
+      puts "<<<<<<<<<<<"
+      puts coupon.number.to_s.blank? or coupon_numbers.include?(coupon.number)
+      if coupon.number.to_s.blank? or coupon_numbers.include?(coupon.number)
+        errors.add(:coupons, "Coupon numbers should be mandatory and uniq for the deal")
+      else
+        coupon_numbers << coupon.number
+      end
+    end
+  end
+
+end

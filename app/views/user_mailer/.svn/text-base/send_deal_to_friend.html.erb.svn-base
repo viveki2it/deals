@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+  </head>
+  <body>
+    <h2><%= @user_shared_deal.name ? @user_shared_deal.name : @user_shared_deal.user.username %> has shared deal </h2>
+    <br />
+    <h2> <%= @user_shared_deal.your_email ? @user_shared_deal.your_email : @user_shared_deal.user.email  %>  deal is you shared  </h2>
+    <br/>
+    <b>
+      <%= @deal.title %>
+    </b>
+    <br/>
+    <p>
+      <%= @user_shared_deal.message %>
+    </p>
+    <p>
+      To view deal please <%= link_to "click", @url %> here
+    </p>
+
+    <br/>
+
+
+
+  </body>
+</html>

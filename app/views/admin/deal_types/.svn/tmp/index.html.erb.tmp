@@ -1,0 +1,51 @@
+<<<<<<< .mine
+<h1> Deal Types </h1>
+=======
+<h1>Deal Types </h1>
+>>>>>>> .r15
+<div id="formDiv">
+<<<<<<< .mine
+  <div style="float:right">
+    <%= link_to "New Deal Type", new_admin_deal_type_path %>
+  </div>
+=======
+  <br />
+>>>>>>> .r15
+  <% if !@deal_types.empty? %>
+    <table width="80%" align="center" border="0">
+      <tr>
+        <td>
+          <div id="deal_type_from">
+            <%= render :partial => "form" %>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <br />
+          <b>Name</b></td>
+      </tr>
+      <% for deal_type in @deal_types %>
+        <tr id="deal_type_<%= deal_type.id %>">
+          <td>
+            <div id="deal_type_name_edit_status_<%= deal_type.id %>"></div>
+            <div id="deal_type_name_edit_<%= deal_type.id %>">
+              <%= link_to image_tag("closeX.gif"), admin_deal_type_path(deal_type), :remote => true, :method => 'DELETE' ,:confirm => 'are you sure?' %>
+              <%= link_to image_tag("pencil.png"), edit_admin_deal_type_path(deal_type), :remote => true %>
+              <span id="deal_type_name_<%= deal_type.id %>"><%= deal_type.name %></span>
+            </div>
+            <div id="deal_type_name_edit_form_<%= deal_type.id %>" style="display:none">
+            </div>
+          </td>
+        </tr>
+
+      <% end %>
+    </table>
+  <% else %>
+    <div style="text-align: center;padding: 10px;">
+      No deal type added
+    </div>
+  <% end %>
+  <br />
+
+</div>

@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/deals/!svn/ver/69/trunk/test/unit/helpers/admin
+END
+stores_helper_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/deals/!svn/ver/25/trunk/test/unit/helpers/admin/stores_helper_test.rb
+END
+user_purchased_deals_helper_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/deals/!svn/ver/69/trunk/test/unit/helpers/admin/user_purchased_deals_helper_test.rb
+END
+admin_helper_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/deals/!svn/ver/3/trunk/test/unit/helpers/admin/admin_helper_test.rb
+END
+deals_helper_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/deals/!svn/ver/3/trunk/test/unit/helpers/admin/deals_helper_test.rb
+END
+deal_types_helper_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/deals/!svn/ver/25/trunk/test/unit/helpers/admin/deal_types_helper_test.rb
+END
+store_helper_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/deals/!svn/ver/25/trunk/test/unit/helpers/admin/store_helper_test.rb
+END

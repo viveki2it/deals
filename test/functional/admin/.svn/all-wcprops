@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/deals/!svn/ver/69/trunk/test/functional/admin
+END
+stores_controller_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/deals/!svn/ver/25/trunk/test/functional/admin/stores_controller_test.rb
+END
+user_purchased_deals_controller_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/deals/!svn/ver/69/trunk/test/functional/admin/user_purchased_deals_controller_test.rb
+END
+admin_controller_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/deals/!svn/ver/3/trunk/test/functional/admin/admin_controller_test.rb
+END
+deals_controller_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/deals/!svn/ver/3/trunk/test/functional/admin/deals_controller_test.rb
+END
+deal_types_controller_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/deals/!svn/ver/25/trunk/test/functional/admin/deal_types_controller_test.rb
+END

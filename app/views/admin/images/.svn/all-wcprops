@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/deals/!svn/ver/44/trunk/app/views/admin/images
+END
+_index.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/deals/!svn/ver/44/trunk/app/views/admin/images/_index.html.erb
+END
+create.js.erb
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/deals/!svn/ver/40/trunk/app/views/admin/images/create.js.erb
+END
+_images.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/deals/!svn/ver/44/trunk/app/views/admin/images/_images.html.erb
+END

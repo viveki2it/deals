@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/deals/!svn/ver/1/trunk/app/views/devise/shared
+END
+_signin.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/deals/!svn/ver/1/trunk/app/views/devise/shared/_signin.html.erb
+END
+_links.erb
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/deals/!svn/ver/1/trunk/app/views/devise/shared/_links.erb
+END
+_signup.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/deals/!svn/ver/1/trunk/app/views/devise/shared/_signup.html.erb
+END

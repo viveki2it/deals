@@ -1,0 +1,46 @@
+<div id="show_form" style="padding-top: -1em;width: 100%;">
+  <%= form_for @share, :url => share_deal_path(@deal, @share), :remote=> true, :method => 'post' do |f| %>
+    <div style="float: left;">
+      <%= @deal.title %><br />
+      <%= image_tag @deal.images.first.image_url(:thumb) %>
+    </div>
+    <div style="float :left;padding-left: 1em;">
+      <table>
+        <% if !current_user %>
+          <tr>
+            <td valign="top">Your Name*:</td>
+            <td><%= f.text_field :name %>
+              <%= validation_error(@share.errors["name"]) %>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">Your Email*:</td>
+            <td><%= f.text_field :your_email %>
+              <%= validation_error(@share.errors["your_email"]) %>
+            </td>
+          </tr>
+        <% end %>
+        <tr>
+          <td valign="top">Email*:</td>
+          <td><%= f.text_field :email%>
+            <%= validation_error(@share.errors["email"]) %>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top">Message</td>
+          <td><%= f.text_area :message,:cols => 40, :rows => 5%>
+            <%= validation_error(@share.errors["message"]) %>
+          </td>
+        </tr>
+        <tr>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td><button class="submit_button">Send</button></td>
+        </tr>
+      </table>
+    </div>
+  <% end %>
+</div>
+

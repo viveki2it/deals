@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 36
+/svn/deals/!svn/ver/112/trunk/config
+END
+routes.rb
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/deals/!svn/ver/93/trunk/config/routes.rb
+END
+database.yml
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/deals/!svn/ver/1/trunk/config/database.yml
+END
+application.rb
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/deals/!svn/ver/44/trunk/config/application.rb
+END
+boot.rb
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/svn/deals/!svn/ver/1/trunk/config/boot.rb
+END
+environment.rb
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/deals/!svn/ver/1/trunk/config/environment.rb
+END
+sphinx.yml
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/deals/!svn/ver/49/trunk/config/sphinx.yml
+END

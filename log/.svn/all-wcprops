@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 31
+/svn/deals/!svn/ver/1/trunk/log
+END
+test.log
+K 25
+svn:wc:ra_dav:version-url
+V 40
+/svn/deals/!svn/ver/1/trunk/log/test.log
+END
+development.log
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/deals/!svn/ver/1/trunk/log/development.log
+END

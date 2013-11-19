@@ -1,0 +1,3 @@
+$('#coupon_number_edit_form_<%=  params[:id] %>').html("<%= escape_javascript(render(:partial => "form")) %>");
+$('#coupon_number_edit_<%=  params[:id] %>').hide();
+$('#coupon_number_edit_form_<%=  params[:id] %>').show();

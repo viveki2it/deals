@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 29
+/svn/deals/!svn/ver/123/trunk
+END
+Gemfile.lock
+K 25
+svn:wc:ra_dav:version-url
+V 41
+/svn/deals/!svn/ver/25/trunk/Gemfile.lock
+END
+Rakefile
+K 25
+svn:wc:ra_dav:version-url
+V 36
+/svn/deals/!svn/ver/1/trunk/Rakefile
+END
+README.rdoc
+K 25
+svn:wc:ra_dav:version-url
+V 39
+/svn/deals/!svn/ver/1/trunk/README.rdoc
+END
+.gitignore
+K 25
+svn:wc:ra_dav:version-url
+V 38
+/svn/deals/!svn/ver/1/trunk/.gitignore
+END
+Gemfile
+K 25
+svn:wc:ra_dav:version-url
+V 36
+/svn/deals/!svn/ver/49/trunk/Gemfile
+END
+MIT-LICENSE
+K 25
+svn:wc:ra_dav:version-url
+V 39
+/svn/deals/!svn/ver/1/trunk/MIT-LICENSE
+END
+config.ru
+K 25
+svn:wc:ra_dav:version-url
+V 37
+/svn/deals/!svn/ver/1/trunk/config.ru
+END

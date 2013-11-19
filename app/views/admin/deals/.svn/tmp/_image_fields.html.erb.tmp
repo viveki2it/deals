@@ -1,0 +1,12 @@
+<div class="fields">
+<<<<<<< .mine
+  <tr>
+    <td>Image:</td>
+    <td><%= f.fields_for :images do |builder| %>
+        <%= builder.file_field :image  %>
+      <%end%></td>
+  </tr>
+=======
+  <%= f.file_field :image %> <%= link_to_remove_fields "remove", f %><br /><br />
+>>>>>>> .r18
+</div>

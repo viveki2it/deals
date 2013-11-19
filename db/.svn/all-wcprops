@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 32
+/svn/deals/!svn/ver/121/trunk/db
+END
+schema.rb
+K 25
+svn:wc:ra_dav:version-url
+V 41
+/svn/deals/!svn/ver/25/trunk/db/schema.rb
+END
+test.sqlite3
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/svn/deals/!svn/ver/1/trunk/db/test.sqlite3
+END
+seeds.rb
+K 25
+svn:wc:ra_dav:version-url
+V 39
+/svn/deals/!svn/ver/1/trunk/db/seeds.rb
+END

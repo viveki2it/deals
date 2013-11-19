@@ -1,0 +1,51 @@
+<h1>Your cart</h1>
+<div id="formDiv">
+
+  <% if !@user_deals.to_a.empty? %>
+    <br /><br />
+    <div>
+      <div style="float:left">
+        <b style="padding-left: 9em; border: 1px">Total Price:</b> <%= @cart.total_price %>
+      </div>
+      <div style="float:right">
+        <%= link_to "Checkout", new_order_path,:class => 'button' %>  or
+        <%= link_to image_tag("https://www.paypal.com/en_US/i/btn/btn_xpressCheckout.gif"), express_new_order_path %>
+      </div>
+    </div>
+    <br /><br />
+    <table border="1" width="90%" align="center" cellpadding="0" cellspacing="0">
+      <% for user_deal in @user_deals %>
+        <tr>
+          <td  valign="top" style="width: 200px;">
+            <%= link_to deal_image(user_deal.deal), deal_path(user_deal.deal) %>
+          </td>
+          <td valign="top" style="width: 60%;">
+            <%= link_to user_deal.deal.title, deal_path(user_deal.deal) %> <br />
+            <%= user_deal.deal.description %>
+          </td>
+          <td  valign="top">
+            <div style="font-size: 16px"><%= user_deal.deal.purchase_price %></div>
+            With A Discount
+            <strong><span id="dealDiscount" class="<%= user_deal.deal.discount_price.to_i > 0 ? "strikeTxt" : "" %>"><%= user_deal.deal.credit_discount_percent %></span></strong><strong><span id="dealDiscount"><%= user_deal.deal.total_discount_percent %></span></strong>
+            <%= link_to "Remove", user_deal_path(user_deal), :method => :delete, :confirm => "Are you sure?",:class => 'button' %>
+          </td>
+        </tr>
+      <% end %>
+    </table><br />
+
+    <br /><br />
+    <div>
+      <div style="float:left">
+        <b style="padding-left: 9em; border: 1px">Total Price:</b> <%= @cart.total_price %>
+      </div>
+      <div style="float:right">
+        <%= link_to "Checkout", new_order_path,:class => 'button' %>  or
+        <%= link_to image_tag("https://www.paypal.com/en_US/i/btn/btn_xpressCheckout.gif"), express_new_order_path %>
+      </div>
+    </div>
+  <% else %>
+    <div style="color:red;font-size: 15px;padding: 50px;text-align:center">
+      Your cart is empty
+    </div>
+  <% end %>
+</div>

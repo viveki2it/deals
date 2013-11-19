@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Find Awesome Deals</title>
+    <%= stylesheet_link_tag 'style' %>
+<<<<<<< .mine
+    <%= javascript_include_tag "jquery", 'rails', "jquery_ujs", 'application'   %>
+=======
+    <%= javascript_include_tag "http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js", "http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.13/jquery-ui.min.js", 'rails', 'application' %>
+>>>>>>> .r18
+    <%= csrf_meta_tag %>
+  </head>
+  <body>
+
+    <div id="header">
+      <%= image_tag("logo.jpg", :class => "logo") %>
+      <div id="header_search">
+        <%= text_field_tag :query, "", :class => "search_query" %>
+      </div>
+
+      <% if user_signed_in? %>
+        <div id="header_logout">
+          <div>
+            Welcome, <%= current_user.user_tokens.empty? ? link_to(current_user.email, edit_user_registration_path) : current_user.email %>.
+          </div>
+          <div style="float:right;padding-top: 5px;">
+            <% if current_user.is_admin? %>
+              <%= link_to "Admin", admin_deals_path, :class => "button" %>
+            <% end %>
+            <%= link_to "Sign out", destroy_user_session_path, :class => "button" %>
+          </div>
+
+        </div>
+      <% else %>
+        <div id="header_login">
+          <%= link_to "Sign In", new_user_session_path, :class => "button" %>
+          <%= link_to "Sign Up", new_user_registration_path, :class => "button" %>
+          <%= link_to image_tag("facebook-connect.gif", :align => "absmiddle"), "/users/auth/facebook" %>
+        </div>
+      <% end %>
+
+    </div>
+    <div id="maincontent">
+      <% if params[:controller].include?("admin/") and current_user.is_admin? %>
+        <div style="float:right;padding-top: 5px;">
+          <%= link_to "Stores", admin_stores_path, :class => "button" %>
+          <%= link_to "Deal types", admin_deal_types_path, :class => "button" %>
+          <%= link_to "Deals", admin_deals_path, :class => "button" %>
+        </div>
+        <div style="clear:both"></div>
+      <% end %>
+      <% flash.each do |key, value| %>
+        <div class="flash <%= key %>"><%= value %></div>
+      <% end %>
+
+      <%= yield %>
+    </div>
+
+    <div id="footer">
+      <span>© 2011 Deals, Inc</span><a href="#">About</a> | <a href="#">Sellers / Artisans<sup>&nbsp;New</sup></a>
+    </div>
+
+
+
+  </body>
+</html>

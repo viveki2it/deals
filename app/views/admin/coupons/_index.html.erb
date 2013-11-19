@@ -1,0 +1,55 @@
+<table width="90%" style="margin-top: -40px;margin-left: 45px;margin-bottom: 45px;background-color: #E3E3E3;">
+  <tr>
+    <td align="center" colspan="2"> <h1>Coupons</h1></td>
+  </tr>
+  <tr>
+    <td style="padding-left: 50px;width: 30%" valign="top">
+      <div>
+
+        <%= form_tag admin_deal_coupons_path(@deal), :remote => true, :method => :post, :id=> "add_more_coupons_form" do %>
+          Add new coupons
+          <div id="coupon_fields">
+            <div style="margin-bottom: 5px;"><%= text_field_tag "coupon_numbers[]"  %></div>
+          </div>
+          <button type="submit" style="margin: 0px;">Add</button> <%= link_to_function "Add more+","", :id =>"add_more_coupons_link" %>
+        <% end %>
+      </div>
+    </td>
+    <td style="padding-top: 50px;" valign="top">
+      <div style="max-height: 500px;overflow: auto">
+        <% for coupon in @deal.coupons %>
+        <div id="coupon_<%= coupon.id %>">
+          <div id="coupon_number_edit_status_<%= coupon.id %>"></div>
+          <div id="coupon_number_edit_<%= coupon.id %>">
+            <% if coupon.is_available? %>
+              <%= link_to image_tag("closeX.gif"), admin_deal_coupon_path(@deal, coupon), :remote => true, :method => 'DELETE' ,:confirm => 'are you sure?' %>
+              <%= link_to image_tag("edit.gif"), edit_admin_deal_coupon_path(@deal, coupon), :remote => true %>
+            <% end %>
+            <span id="coupon_number_<%= coupon.id %>"><%= coupon.number %>(<%= coupon.status %>)</span>
+          </div>
+          <div id="coupon_number_edit_form_<%= coupon.id %>" style="display:none">
+          </div>
+          </div>
+        <% end %>
+      </div>
+    </td>
+  </tr>
+</table>
+
+<script>
+  $(function() {
+    var scntDiv = $('#coupon_fields');
+    var i = $('#coupon_fields input').size() + 1;
+
+    $('#add_more_coupons_link').live('click', function() {
+      $('<div style="margin-bottom: 5px;" id="'+i+'"><input type="text" name="coupon_numbers[]"><a href="javascript:removeCouponField('+i+')" id="removeCoupon">remove</a></div>').appendTo(scntDiv);
+      i++;
+      return false;
+    });
+
+  });
+
+  function removeCouponField(num){
+    $("#"+num).remove();
+  }
+</script>

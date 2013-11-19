@@ -1,0 +1,11 @@
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/deals/!svn/ver/1/trunk/app/controllers/users
+END
+omniauth_callbacks_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/deals/!svn/ver/1/trunk/app/controllers/users/omniauth_callbacks_controller.rb
+END

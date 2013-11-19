@@ -1,0 +1,20 @@
+
+<%= form_for [:admin, @deal_type], :remote => true, :html => { :style => "margin:0px;" } do |f| %>
+  <div style="margin: 20px;">
+    <div style="float: left">
+      <%= f.label :name, " Name*" %>
+    </div>
+    <div style="float: left">
+      <%= f.text_field :name%>
+      <%= validation_error(@deal_type.errors["name"]) %> &nbsp;
+    </div>
+    <div style="float: left">
+      <%=f.submit @deal_type.new_record? ? 'create' : 'update', :style => "width: 70px;" %>
+      <% if ['edit', 'update'].include?(params[:action]) %>
+        <%= link_to_function "Cancel", "$('#deal_type_name_edit_form_#{@deal_type.id}').hide();$('#deal_type_name_edit_#{@deal_type.id}').show();" %>
+      <% end %>
+    </div>
+    <div style="clear: both;"></div>
+  </div>
+
+<% end %>

@@ -1,0 +1,179 @@
+<style>
+  #formDiv form {
+    width: 90%;
+  }
+</style>
+<h1>Edit Deal</h1>
+<div id="formDiv">
+  <%= form_for [:admin, @deal], :html => { :multipart => true} do |f| %>
+    <table width="100%">
+      <tr>
+        <td colspan="3" align="center"> <h1>Edit deal details</h1></td>
+      </tr>
+      <tr>
+        <td width="20%" valign="top">Store:</td>
+        <td width="20%"><%= f.text_field :store_name %> </td>
+        <td><%= validation_error(@deal.errors["store_name"]) %></td>
+      </tr>
+      <tr>
+        <td width="20%" valign="top">Store Image:</td>
+        <td width="20%"><%= f.file_field :store_image %> </td>
+        <td><%= validation_error(@deal.errors["store_image"]) %></td>
+      </tr>
+      <tr>
+        <td valign="top">Deal Type:</td>
+        <td><%= f.collection_select :deal_type_id, DealType.all, :id, :name %> </td>
+        <td><%= validation_error(@deal.errors["deal_type_id"]) %></td>
+      </tr>
+      <tr>
+        <td valign="top">Title:</td>
+        <td>
+          <%= f.text_field :title %>
+        </td>
+        <td><%= validation_error(@deal.errors["title"]) %></td>
+      </tr>
+      <tr>
+        <td valign="top">Description:</td>
+        <td><%= f.text_area :description, :rows => 3, :cols => 39 %> </td>
+        <td valign="top"><%= validation_error(@deal.errors["description"]) %></td>
+      </tr>
+      <tr>
+        <td valign="top">Purchase Price:</td>
+        <td><%= f.text_field :purchase_price %> </td>
+        <td><%= validation_error(@deal.errors["purchase_price"]) %></td>
+      </tr>
+      <tr>
+        <td valign="top">Discount Price:</td>
+        <td><%= f.text_field :discount_price %> </td>
+        <td><%= validation_error(@deal.errors["discount_price"]) %></td>
+      </tr>
+      <tr>
+        <td valign="top">Credit Price:</td>
+        <td><%= f.text_field :credit_price %> </td>
+        <td><%= validation_error(@deal.errors["purchase_credits"]) %></td>
+      </tr>
+      <tr>
+        <td valign="top">Status:</td>
+        <td><%= f.select :status, DEAL_STATUSES %> </td>
+        <td><%= validation_error(@deal.errors["status"]) %></td>
+
+      </tr>
+      <tr>
+        <td valign="top">Deal Date:</td>
+        <td>
+  <%#= f.date_select :deal_date, :start_year => Time.now.year, :end_year => (Time.now.year + 10)%>
+          <%= f.text_field :deal_date, :value => (@deal.deal_date ? @deal.deal_date.strftime("%m/%d/%Y") : ""), :readonly => true %>
+        </td>
+        <td valign="top"><%= validation_error(@deal.errors["deal_date"]) %></td>
+      </tr>
+      <tr>
+        <td valign="top">Expire Date:</td>
+        <td><%#= f.date_select :expire_date, :start_year => Time.now.year, :end_year => (Time.now.year + 10) %>
+          <%= f.text_field :expire_date, :value => (@deal.expire_date ? @deal.expire_date.strftime("%m/%d/%Y %I:%M %P") : ""), :readonly => true %>
+        </td>
+        <td valign="top"><%= validation_error(@deal.errors["expire_date"]) %></td>
+      </tr>
+      <tr>
+        <td valign="top">Coupon Expire Date:</td>
+        <td><%#= f.date_select :coupon_expire_date, :start_year => Time.now.year, :end_year => (Time.now.year + 10) %>
+          <%= f.text_field :coupon_expire_date, :value => (@deal.coupon_expire_date ? @deal.coupon_expire_date.strftime("%m/%d/%Y %I:%M %P") : ""), :readonly => true %>
+        </td>
+        <td valign="top"><%= validation_error(@deal.errors["coupon_expire_date"]) %></td>
+      </tr>
+      <tr>
+        <td valign="top">Store Message:</td>
+        <td><%= f.text_area :store_message, :rows => 3, :cols => 39 %> </td>
+        <td valign="top"><%= validation_error(@deal.errors["store_message"]) %></td>
+      </tr>
+
+      <tr>
+        <td valign="top">Store URL:</td>
+        <td><%= f.text_field :store_url %> </td>
+        <td valign="top"><%= validation_error(@deal.errors["store_url"]) %></td>
+      </tr>
+      <% if @deal.new_record? %>
+        <tr>
+          <td valign="top">Coupons:</td>
+          <td>
+            <%= f.fields_for :coupons do |builder| %>
+              <div style="margin-bottom: 5px;"><%= builder.text_field :number %> </div>
+            <%end%>
+            <div>
+              <%= link_to_add_fields "Add More Coupons+", f, :coupons %>
+            </div>
+            <br />
+          </td>
+          <td><%= validation_error(@deal.errors["number"]) %></td>
+        </tr>
+
+        <tr>
+          <td valign="top">Images:</td>
+          <td>
+            <%= f.fields_for :images do |builder| %>
+              <%= builder.file_field :image  %> <br /><br />
+
+            <%end%>
+            <div>
+              <%= link_to_add_fields "Add More Images+", f, :images %>
+            </div>
+            <br />
+          </td>
+          <td><%= validation_error(@deal.errors["images.image"]) %></td>
+        </tr>
+        <!--
+        <tr>
+          <td></td>
+          <td>
+            Add Images from URL <br />
+            <div style="padding-bottom: 5px;"><%#= text_field_tag "image_urls[]" %> </div>
+            <div style="padding-bottom: 5px;"><%#= text_field_tag "image_urls[]" %>  </div>
+            <div style="padding-bottom: 5px;"><%#= text_field_tag "image_urls[]" %> </div>
+            <div style="padding-bottom: 5px;"><%#= text_field_tag "image_urls[]" %>  </div>
+          </td>
+        </tr>
+        -->
+      <% end %>
+      
+      <tr>
+        <td></td>
+        <td>
+          <button type="submit"><%= @deal.new_record? ? 'Create' : 'Update' %></button>
+        </td>
+        <td></td>
+      </tr>
+    </table>
+  <% end %>
+
+  <% if !@deal.new_record? %>
+    <div style="clear: both"></div>
+    <div id="deal_coupons">
+      <%= render :partial => "admin/coupons/index" %>
+    </div>
+    <div id="deal_images">
+      <%= render :partial => "admin/images/index" %>
+    </div>
+    <div style="clear: both"></div>
+  <% end %>
+
+
+
+
+</div>
+<script>
+  $('#deal_deal_date').datetimepicker({
+    showTimepicker: false,
+    minDate: 0
+  });
+  $('#deal_expire_date').datetimepicker({
+    ampm: true,
+    minDate: 0
+  });
+
+  $('#deal_coupon_expire_date').datetimepicker({
+    ampm: true,
+    minDate: 0
+
+  });
+
+
+</script>

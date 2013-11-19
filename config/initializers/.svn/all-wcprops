@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/deals/!svn/ver/112/trunk/config/initializers
+END
+inflections.rb
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/deals/!svn/ver/1/trunk/config/initializers/inflections.rb
+END
+devise.rb
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/deals/!svn/ver/46/trunk/config/initializers/devise.rb
+END
+session_store.rb
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/deals/!svn/ver/1/trunk/config/initializers/session_store.rb
+END
+secret_token.rb
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/deals/!svn/ver/1/trunk/config/initializers/secret_token.rb
+END
+backtrace_silencers.rb
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/deals/!svn/ver/1/trunk/config/initializers/backtrace_silencers.rb
+END
+generators.rb
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/deals/!svn/ver/1/trunk/config/initializers/generators.rb
+END
+carrierwave.rb
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/deals/!svn/ver/10/trunk/config/initializers/carrierwave.rb
+END
+mime_types.rb
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/deals/!svn/ver/1/trunk/config/initializers/mime_types.rb
+END
+constants.rb
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/deals/!svn/ver/112/trunk/config/initializers/constants.rb
+END

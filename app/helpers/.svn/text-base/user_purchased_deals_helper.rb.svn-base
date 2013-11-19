@@ -1,0 +1,2 @@
+module UserPurchasedDealsHelper
+end

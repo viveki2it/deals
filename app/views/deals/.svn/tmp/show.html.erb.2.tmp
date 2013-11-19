@@ -1,0 +1,93 @@
+<<<<<<< .mine
+<% if @deal %>
+  <h1><%=  @deal.title %></h1>
+<% end %>
+=======
+<h1><%= @deal.title if @deal %></h1>
+>>>>>>> .r123
+<div class="deals" id="content">
+  <% if @deal %>
+    <div class="deal">
+      <div class="leftSec" style="max-height: 400px;overflow: auto;">
+        <% if !@deal.images.empty? %>
+          <% for image in @deal.images %>
+            <%= link_to image_tag(image.image_url(:large), :width => "70", :height => "70"), "#" %>
+          <% end %>
+        <% else %>
+          <%= image_tag("no_image.gif", :width => "70") %>
+        <% end %>
+      </div>
+      <div class="midSec">
+        <%= image_tag(@deal.images.first ? @deal.images.first.image_url(:large) : "no_image.gif", :id => "large_deal_image") %>
+      </div>
+      <div class="rightSec">
+        <div class="dealsDetails">
+          <% unless @deal.status == DEAL_CLOSED %>
+            <table cellspacing="10" cellpadding="0">
+              <tbody><tr>
+                  <td><p class="title">PRICE</p>
+                    <p>
+                      <% if @deal.discount_price.to_i > 0 %>
+                        <strong><span class="strikeTxt" id="dealPrice">$<%= @deal.purchase_price %></span></strong><strong><span id="dealPrice">$<%= @deal.purchase_price.to_i - @deal.discount_price.to_i %></span></strong>
+                      <% else %>
+                        <strong><span id="dealPrice">$<%= @deal.purchase_price %></span></strong>
+                      <% end %>
+                    </p>
+                  </td>
+                  <td><p class="title">CREDIT</p>
+                    <p><strong><span id="dealCredit">$<%= @deal.credit_price %></span></strong></p></td>
+                  <td><p class="title">DISCOUNT</p>
+                    <p><strong><span id="dealDiscount" class="<%= @deal.discount_price.to_i > 0 ? "strikeTxt" : "" %>"><%= @deal.credit_discount_percent %></span></strong><strong><span id="dealDiscount"><%= @deal.total_discount_percent %></span></strong></p>
+                  </td>
+                </tr>
+              </tbody></table>
+            <% if @deal.expire_date > Date.today  and @deal.is_available? %>
+              <div class="cartButton">
+                <% if current_user%>
+                  <% if current_user.credits >= @deal.credit_price %>
+                    <%= link_to "Buy now!", purchage_deal_path(@deal), :method => :post, :style => 'color : white', :confirm => "You are buying this deal using your credits. Do you want to continue?" %>
+                  <% else %>
+                    <%= link_to "Add to cart", add_to_cart_deal_path(@deal), :method => :post, :style => 'color : white', :remote => true %>
+                  <% end %>
+                <% else %>
+                  <%= link_to_function "Add to cart",   "alert('Please login/register to purchage this deal')", :style => 'color : white' %>
+                <% end %>
+              </div>
+            <% end %>
+
+
+            <p id="dealDesc" class="smallText">Store credit expires in 1 month and can be used for shipping.
+              This seller ships to The United States.</p>
+            <%= render :partial => "layouts/share_social_networks" %>
+            <%= link_to_function "Share with friend","show_share_form(#{params[:id]})", :class => "button" %>
+          <% else %>
+            DEAL IS CLOSED
+          <% end %>
+        </div>
+        <div class="sellerMsg">
+          <%= link_to(image_tag(@deal.store_image_url(:thumb)), @deal.store_url, :target => "_blank") if @deal.store_image?  %>
+          <h3>Message form Seller</h3><h4><%= link_to @deal.store_name, @deal.store_url, :target => "_blank" %></h4>
+          <p>
+            <%= @deal.store_message %>
+          </p>
+        </div>
+      </div>
+    </div>
+  <% else %>
+    <div style="text-align: center;padding: 10px;">
+      No Featured deals
+    </div>
+  <% end %>
+  <%= render :partial => 'other_deals' %>
+</div>
+
+<script>
+
+  $(function(){
+    $('.leftSec a img').hover(function(e){
+      e.preventDefault();
+      $('.midSec img').attr('src',$(this).attr('src'));
+    });
+  });
+
+</script>

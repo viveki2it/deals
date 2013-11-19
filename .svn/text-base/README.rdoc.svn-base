@@ -1,0 +1,13 @@
+== Rails3 Omniauth-Devise supercombo
+
+As bare as you could get devise-omniauth combo
+
+for a full featured example with tests!  See Parker Thompson's fork:
+
+https://github.com/pt/devise-omniauth-example
+
+
+
+Basic model storing the user_id, provider, & uid.
+
+https://github.com/plataformatec/devise/wiki/OmniAuth:-Overview

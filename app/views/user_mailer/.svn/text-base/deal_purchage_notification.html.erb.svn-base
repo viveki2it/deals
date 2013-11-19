@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+  </head>
+  <body>
+    <h2>You have purchased a deal and deal details are bellow </h2>
+    <br/>
+    <b>
+      <%= @deal.title %>
+    </b>
+    <p>
+      <%= @deal.description %>
+    </p>
+    <br/>
+    <p>
+      <b>Coupon number:</b>
+      <%= @user_purchased_deal.coupon_number %> <br />
+      <b>Coupon expired on:</b>
+      <%= @deal.coupon_expire_date.strftime("%b, %d %Y %I:%M %P") %> <br />
+      <b>Store name:</b>
+      <%= @deal.store_name %> <br />
+      <b>Store URL:</b>
+      <%= @deal.store_url %> <br />
+    </p>
+    <p>
+      Please show this coupon number at the store to get the deal
+    </p>
+    <p>
+      To view deal please <%= link_to "click", @url %> here and to view store <%= link_to "click", @deal.store_url %> here
+    </p>
+
+
+  </body>
+</html>

@@ -1,0 +1,27 @@
+<div class="deals" id="content">
+  <% if params[:controller].include?("admin/") %>
+    <%#*<div>Deal Type:%>
+      <%#=  select_tag :status, options_for_select([["all",""]]+DEAL_STATUSES,params[:status]),:onchange => "window.location.href = '/admin/deals?status='+this.value" %>
+    <%#*</div>%>
+  <% end %>
+  <div class="content homepage" style="width: 864px;">
+    <div class="prodImgs">
+      <div class="prodImgWrap">
+        <div class="prodImg">
+          <%= link_to image_tag(@deal.images.first.image_url(:thumb),:width => "130", :height => "110"), deal_path(@deal) %>             </div>
+        <span class="itemNameVis">
+          <% if params[:controller].include?("admin/") %>
+            <%= link_to image_tag("closeX.gif"), admin_deal_path(@deal), :method => 'DELETE' ,:confirm => 'are you sure?' %>
+            <%= link_to image_tag("edit.gif"), edit_admin_deal_path(@deal) %>
+          <% end %>
+          <%= link_to @deal.title, deal_path(@deal) %>
+          <strong>(&nbsp;<%=  @deal.active_coupons.count %>&nbsp;)</strong> <br />
+          <% if @deal.active_coupons.count > 0 and current_user and !params[:controller].include?("admin/") %>
+            <%= link_to 'Add To Cart', add_to_cart_deal_path(@deal),:remote => true,:class => 'button',:method => 'post' %>
+          <% end %>
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
+

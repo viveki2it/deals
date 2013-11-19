@@ -1,0 +1,60 @@
+<h1>Purchase history for <%= @deal.title %></h1>
+<div id="formDiv">
+  <table cellspacing="20px" width="100%" style="font-size: 15px;">
+    <tr>
+      <td>
+        <%= link_to deal_image(@deal), deal_path(@deal) %>
+      </td>
+      <td>
+        <span style="font-size: 20px;color :black;"><%= link_to @deal.title, deal_path(@deal) %></span><br />
+        <%= @deal.description %><br />
+        <b>Deal expire on:</b> <%= @deal.expire_date.strftime("%b, %d %Y %I:%M %P") %> <br />
+        <b>Coupon expire on:</b> <%= @deal.coupon_expire_date.strftime("%b, %d %Y %I:%M %P") %> <br />
+        <b>Credit Price:</b> <%= @deal.credit_price %> <br />
+        <b>Purchased price:</b> <%= @deal.purchase_price %> <br />
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2">
+        <table cellpadding="10" align="center">
+          <tr>
+            <td colspan="4" align="center">
+              <b>Purchase details</b>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <b>User</b>
+            </td>
+            <td>
+              <b>Coupon number</b>
+            </td>
+            <td>
+              <b>Purchased on</b>
+            </td>
+            <td>
+              <b>Purchase type</b>
+            </td>
+          </tr>
+          <% for purchased_deal in @deal.user_purchased_deals %>
+            <tr>
+              <td>
+                <%= purchased_deal.user.email %>
+              </td>
+              <td>
+                <%= purchased_deal.coupon_number %>
+              </td>
+              <td>
+                <%= purchased_deal.created_at.strftime("%b, %d %Y %I:%M %P") %>
+              </td>
+              <td>
+                <%= purchased_deal.purchased_type %>
+              </td>
+            </tr>
+          <% end %>
+        </table>
+
+      </td>
+    </tr>
+  </table>
+</div>

@@ -1,0 +1,3 @@
+$('#deal_type_name_edit_form_<%=  params[:id] %>').html("<%= escape_javascript(render(:partial => "form")) %>");
+$('#deal_type_name_edit_<%=  params[:id] %>').hide();
+$('#deal_type_name_edit_form_<%=  params[:id] %>').show();

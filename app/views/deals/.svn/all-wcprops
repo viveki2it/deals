@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/deals/!svn/ver/123/trunk/app/views/deals
+END
+_share_with_friends.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/deals/!svn/ver/80/trunk/app/views/deals/_share_with_friends.html.erb
+END
+customer_deal.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/deals/!svn/ver/51/trunk/app/views/deals/customer_deal.html.erb
+END
+index.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/deals/!svn/ver/26/trunk/app/views/deals/index.html.erb
+END
+_other_deals.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/deals/!svn/ver/104/trunk/app/views/deals/_other_deals.html.erb
+END
+_list.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/deals/!svn/ver/120/trunk/app/views/deals/_list.html.erb
+END
+share.js.erb
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/deals/!svn/ver/44/trunk/app/views/deals/share.js.erb
+END
+show.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/deals/!svn/ver/123/trunk/app/views/deals/show.html.erb
+END
+_search.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/deals/!svn/ver/69/trunk/app/views/deals/_search.html.erb
+END

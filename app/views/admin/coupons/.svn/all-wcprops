@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/deals/!svn/ver/44/trunk/app/views/admin/coupons
+END
+_index.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/deals/!svn/ver/44/trunk/app/views/admin/coupons/_index.html.erb
+END
+update.js.erb
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/deals/!svn/ver/32/trunk/app/views/admin/coupons/update.js.erb
+END
+create.js.erb
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/deals/!svn/ver/37/trunk/app/views/admin/coupons/create.js.erb
+END
+edit.js.erb
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/deals/!svn/ver/32/trunk/app/views/admin/coupons/edit.js.erb
+END
+_form.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/deals/!svn/ver/37/trunk/app/views/admin/coupons/_form.html.erb
+END

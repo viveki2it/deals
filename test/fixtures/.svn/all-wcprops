@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/svn/deals/!svn/ver/69/trunk/test/fixtures
+END
+stores.yml
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/deals/!svn/ver/25/trunk/test/fixtures/stores.yml
+END
+users.yml
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/deals/!svn/ver/1/trunk/test/fixtures/users.yml
+END
+images.yml
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/deals/!svn/ver/25/trunk/test/fixtures/images.yml
+END
+coupons.yml
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/deals/!svn/ver/25/trunk/test/fixtures/coupons.yml
+END
+user_deals.yml
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/deals/!svn/ver/25/trunk/test/fixtures/user_deals.yml
+END
+user_purchaged_deals.yml
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/deals/!svn/ver/69/trunk/test/fixtures/user_purchaged_deals.yml
+END
+deal_types.yml
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/deals/!svn/ver/25/trunk/test/fixtures/deal_types.yml
+END

@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/deals/!svn/ver/84/trunk/app/views/user_mailer
+END
+send_deal_to_friend.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/deals/!svn/ver/80/trunk/app/views/user_mailer/send_deal_to_friend.html.erb
+END
+deal_purchage_notification.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/deals/!svn/ver/84/trunk/app/views/user_mailer/deal_purchage_notification.html.erb
+END
+welcome_email.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/deals/!svn/ver/1/trunk/app/views/user_mailer/welcome_email.html.erb
+END

@@ -1,0 +1,18 @@
+<!--horizontal count-->
+<!--<span class="st_fblike_hcount"  st_url="<%#= CGI::escape(request.url) %>"></span>-->
+
+<!-- horizontal counter-->
+<span class="st_plusone_hcount" st_url="<%= CGI::escape(request.url) %>"></span>
+
+<!-- horizontal counter-->
+<span class="st_twitter_hcount" st_url="<%= CGI::escape(request.url) %>"></span>
+
+<!-- horizontal counter-->
+<!--
+<%#*<span class="st_linkedin_hcount" st_url="<%= CGI::escape(request.url) %>"></span>%>
+-->
+<!--horizontal count-->
+<!--<span class="st_facebook_hcount"  st_url="<%#= CGI::escape(request.url) %>"></span>-->
+
+
+<script type="text/javascript">var switchTo5x=true;</script><script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script><script type="text/javascript">stLight.options({publisher:'96e81df2-ce36-4b6b-bb47-a7171ba403eb'});</script>

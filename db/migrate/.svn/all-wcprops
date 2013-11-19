@@ -1,0 +1,119 @@
+K 25
+svn:wc:ra_dav:version-url
+V 40
+/svn/deals/!svn/ver/121/trunk/db/migrate
+END
+20101105152126_devise_create_users.rb
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/deals/!svn/ver/1/trunk/db/migrate/20101105152126_devise_create_users.rb
+END
+20111111062349_add_store_name_to_deals.rb
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/deals/!svn/ver/84/trunk/db/migrate/20111111062349_add_store_name_to_deals.rb
+END
+20111024085704_create_deal_types.rb
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/deals/!svn/ver/10/trunk/db/migrate/20111024085704_create_deal_types.rb
+END
+20111103050003_create_carts.rb
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/deals/!svn/ver/56/trunk/db/migrate/20111103050003_create_carts.rb
+END
+20111025090316_create_orders.rb
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/deals/!svn/ver/54/trunk/db/migrate/20111025090316_create_orders.rb
+END
+20111111061340_change_purchase_credits_in_deals.rb
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/deals/!svn/ver/88/trunk/db/migrate/20111111061340_change_purchase_credits_in_deals.rb
+END
+20111103152234_add_credits_to_users.rb
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/deals/!svn/ver/49/trunk/db/migrate/20111103152234_add_credits_to_users.rb
+END
+20111024135146_create_images.rb
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/deals/!svn/ver/10/trunk/db/migrate/20111024135146_create_images.rb
+END
+20111030093222_create_user_shared_deals.rb
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/deals/!svn/ver/38/trunk/db/migrate/20111030093222_create_user_shared_deals.rb
+END
+20101106080918_create_user_tokens.rb
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/deals/!svn/ver/1/trunk/db/migrate/20101106080918_create_user_tokens.rb
+END
+20111111085756_remove_store_id.rb
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/deals/!svn/ver/84/trunk/db/migrate/20111111085756_remove_store_id.rb
+END
+20111105055857_create_order_transactions.rb
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/deals/!svn/ver/54/trunk/db/migrate/20111105055857_create_order_transactions.rb
+END
+20111110074353_add_missing_column_to_deals.rb
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/deals/!svn/ver/88/trunk/db/migrate/20111110074353_add_missing_column_to_deals.rb
+END
+20111024135134_create_coupons.rb
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/deals/!svn/ver/13/trunk/db/migrate/20111024135134_create_coupons.rb
+END
+20111024135236_create_user_deals.rb
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/deals/!svn/ver/49/trunk/db/migrate/20111024135236_create_user_deals.rb
+END
+20111024085717_create_stores.rb
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/deals/!svn/ver/88/trunk/db/migrate/20111024085717_create_stores.rb
+END
+20111103162755_create_user_purchased_deals.rb
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/deals/!svn/ver/69/trunk/db/migrate/20111103162755_create_user_purchased_deals.rb
+END
+20111117161645_add_time_zone_to_carts_table.rb
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/deals/!svn/ver/121/trunk/db/migrate/20111117161645_add_time_zone_to_carts_table.rb
+END
+20111024122953_create_deals.rb
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/deals/!svn/ver/74/trunk/db/migrate/20111024122953_create_deals.rb
+END

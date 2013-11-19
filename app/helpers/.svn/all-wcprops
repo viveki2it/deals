@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 41
+/svn/deals/!svn/ver/120/trunk/app/helpers
+END
+orders_helper.rb
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/deals/!svn/ver/48/trunk/app/helpers/orders_helper.rb
+END
+application_helper.rb
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/deals/!svn/ver/120/trunk/app/helpers/application_helper.rb
+END
+user_purchased_deals_helper.rb
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/deals/!svn/ver/69/trunk/app/helpers/user_purchased_deals_helper.rb
+END
+user_deals_helper.rb
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/deals/!svn/ver/53/trunk/app/helpers/user_deals_helper.rb
+END
+home_helper.rb
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/deals/!svn/ver/1/trunk/app/helpers/home_helper.rb
+END
+deals_helper.rb
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/deals/!svn/ver/25/trunk/app/helpers/deals_helper.rb
+END

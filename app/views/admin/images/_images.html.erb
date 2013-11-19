@@ -1,0 +1,6 @@
+<% for image in @deal.images %>
+  <div style="float:left" id="deal_image_<%= image.id %>">
+    <span><%= image_tag(image.image_url(:thumb), :width => "90", :height => "90") %></span>
+    <%= link_to image_tag("closeX.gif"), admin_deal_image_path(@deal, image), :remote => true, :method => 'DELETE' ,:confirm => 'are you sure?' %>
+  </div>
+<% end %>

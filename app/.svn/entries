@@ -1,0 +1,46 @@
+10
+
+dir
+123
+http://svn.dine-media.com/svn/deals/trunk/app
+http://svn.dine-media.com/svn/deals
+
+
+
+2011-11-17T17:35:04.324945Z
+123
+nagarjuna
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+2676884a-6fb9-41a3-b030-09e4dd5c4c45
+
+helpers
+dir
+
+models
+dir
+
+controllers
+dir
+
+mailers
+dir
+
+views
+dir
+
+uploaders
+dir
+

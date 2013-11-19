@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 39
+/svn/deals/!svn/ver/121/trunk/lib/tasks
+END
+.gitkeep
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/deals/!svn/ver/1/trunk/lib/tasks/.gitkeep
+END
+deals.rake
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/deals/!svn/ver/121/trunk/lib/tasks/deals.rake
+END
